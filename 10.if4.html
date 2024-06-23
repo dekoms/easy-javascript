@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    /*
+    나열된 비교식들은 위에서부터 차례로 작동하며
+    단 하나라도 참이 발생하면
+    해당하는 실행구문이 실행되고 
+    해당 if구문은 종료됩니다
+
+    if(비교식A){
+        비교식 A가 참일 때 실행될 구문
+    }else if(비교식 B){
+        비교식 B가 참일 때 실행될 구문
+    }else if(비교식 C){
+        비교식 C가 참일 때 실행될 구문
+    }...else{
+        위의 비교식들 중 참이 하나도 없을때 실행될 구문
+    }
+    */
+
+    let a = 3;
+
+    if(a > 18){
+        document.write('a가 18보다 크다');
+    }else if(a > 10){
+        document.write('a가 10보다 크고 18보다 작다');
+    }else if(a > 5){
+        document.write('a가 10보다 작고 5보다 크다');
+    }else{
+        document.write('a는 5보다 작다');
+    }
+
+    document.write('<hr>');
+
+    // let mon = prompt('몇 월달인지 입력해주세용');
+    
+    // if(mon>=3 && mon<=5){
+    //     document.write('봄입니다');
+    // }else if(mon>=6 && mon<=8){
+    //     document.write('여름입니다');
+    // }else if(mon>=9 && mon<=11){
+    //     document.write('가을입니다');
+    // }else if(mon>0 && mon<=12){
+    //     document.write('겨울입니다');
+    // }
+
+    // let age = prompt('나이를 입력해주세요');
+
+    // if(age < 5){
+    //     document.write('무료입장입니다');
+    // }else if(age < 19){
+    //     document.write('7천원입니다');
+    // }else if(age < 60){
+    //     document.write('1만 2천원 입니다');
+    // }else{
+    //     document.write('3천원입니다');
+    // }
+
+    /*
+        입력받은 숫자가 만약 짝수면 "짝수입니다"
+        홀수면 "홀수입니다"
+    */
+
+//    let num = prompt('숫자를 입력해주세요');
+//    if(num % 2 == 0){
+//     document.write('짝수입니다');
+//    }else{
+//     document.write('홀수입니다');
+//    }
+
+let height = prompt('키를 입력해주세요');
+let weight = prompt('체중을 입력해주세요');
+let avr = (height - 100) * 0.9;
+
+ if(avr * 1.2 <= weight){
+    document.write('과체중입니다');
+ }else if(avr * 0.9 <= weight){
+    document.write('정상체중입니다');
+ }else if(avr * 0.8 <= weight){
+    document.write('미용체중입니다');
+ }else{
+    document.write('저체중입니다');
+ }
+
+
+</script>
+    
+
+
+
+</body>
+</html>

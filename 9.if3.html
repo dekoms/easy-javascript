@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            아까처럼 id와 pw를 물어서
+            각각의 변수에 저장을 합니다!
+            
+            id가 yaho1234이고 pw가 12341234면
+            로그인 되었습니다, 출력
+            그런데 id와 pw 둘중 하나가 틀렸을 경우,
+            아이디가 틀린 경우에는 아이디가 틀렸다,
+            비밀번호가 틀린 경우에는 비밀번호가 틀렸다 
+            라고 출력
+
+            -id O   pw O -> 로그인
+            -id O   pw X -> 비번틀림
+            -id X   pw O -> 아이디틀림
+            -id X   px X -> 뭐든간에 틀림
+
+        */
+
+        // let id = prompt('id');
+        // let pw = prompt('pw');
+
+        // if(id == 'yaho1234' && pw ==12341234){
+        //     document.write('로그인 되었습니다.');
+        // }else{
+
+        //     if(id == 'yaho1234'){
+        //         document.write('비밀번호가 틀렸습니다');
+        //     }else{
+        //         document.write('아이디가 틀렸습니다');
+        //     }
+
+        // }
+
+       //let hi =  confirm('hi!');
+/*
+        let del = confirm('삭제하시겠습니까?');
+
+            1. 확인을 누른다 : 
+                 1-1. 정말 삭제하시겠습니까? (묻기)
+                 1-2. 확인을 누른다 : "삭제되었습니다."
+                 1-3. 취소를 누른다 : "취소되었습니다."
+            2. 취소를 누른다 : 취소되었습니다.
+
+*/
+
+let del = confirm('삭제하시겠습니까?');
+
+if(del == true){
+    let del2 = confirm('정말로 삭제하시겠습니까?');
+    if(del2 == true){
+        alert('삭제되었습니다.');
+    }else{
+        alert('삭제가 취소되었습니다.');
+    }
+
+}else{
+    alert('취소되었습니다.');
+}
+
+    </script>
+</body>
+</html>

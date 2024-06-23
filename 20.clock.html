@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function clock(){
+            let now = new Date();
+        console.log(now);
+
+        let hr = now.getHours(); // 시를 추출
+        let min = now.getMinutes(); // 분을 추출
+        let sec = now.getSeconds(); // 초를 추출
+/*
+        현재 시간시스템은 00~23시로 표기된다.
+        그런데 이것을
+        01~12의 시스템으로 바꿔주고,
+        오후의 경우 뒤에 P.M.을 붙여준다.
+        오전의 경우는 뒤에 A.M.을 붙여준다.
+*/
+        let moment = 'A.M.';
+
+        if(hr == 12){
+            moment = 'P.M.';
+        }else if(hr >= 13){
+            hr -= 12;
+            moment = 'P.M.';
+        }else if(hr == 0){
+            hr = 12;
+        }
+
+
+
+
+
+        if(hr < 10){
+            hr = '0' + hr;
+            //hr += '0';
+        }
+
+        if(min < 10){
+            min = '0' + min;
+        }
+
+        if(sec < 10){
+            sec = '0' + sec;    
+        }
+
+        document.write(`${hr}:${min}:${sec} ${moment}`);
+        }//function.clock
+
+        clock();
+
+    /*
+        함수의 매개변수자리에 함수가 들어갈 수 있다. (->콜백함수)
+        그런데 이 때, 이미 존재하는 단일함수만 매개변수로
+        작동하게 하려면, 해당 함수자리에 함수의 이름만
+        호출하면 된다. 
+    */
+        setInterval(clock,500);
+
+    </script>
+
+</body>
+</html>

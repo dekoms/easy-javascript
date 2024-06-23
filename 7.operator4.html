@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        // let gender = prompt('성별이 무엇입니까');
+        // let area = prompt('사는 지역은?');
+        // let dog = confirm('강아지 좋아하나요?');
+
+        // if(gender == '여성' && area == '동구' && dog==true){
+        //      document.write('합격입니다');
+        // }
+
+        /*
+            &&연산자
+            엮여있는 비교연산자들의 결과값이 모두 true여야만
+            true라고 결정해줌 
+            한국어로 치환을 했을 때, '동시에'라는
+            말이 들어가면 &&를 쓰면 됩니다.
+            ex) 220보다 크거나 같고 동시에 260보다
+            작거나 같아야 한다. 
+        
+        */
+        // let size = prompt('발사이즈 입력');
+        // if(size >= 220 && size <= 260){
+        //     document.write('재고가 있습니다');
+        // }
+
+    //   let gender = prompt('성별이 무엇입니까');
+    //     let area = prompt('사는 지역은?');
+    //     let dog = confirm('강아지 좋아하나요?');
+
+    //     if(gender == '여성' || area == '동구' || dog == true){
+
+    //         document.write('채용되었습니다');
+    //     }
+
+    /*
+
+    || 엮여있는 비교연산자들 중 단 하나만 true여도
+    결과값이 true가 됨. 
+    한국어로 치환 했을 때 "A거나 B일때"
+    */
+    let age = prompt('나이!!!');
+    if(age < 5 || age > 60){
+        document.write('무료입장 가능합니다');
+    }
+
+    </script>
+</body>
+</html>

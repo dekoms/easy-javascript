@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myChr = {
+            id : 'yaho1234',
+            pw : '12341234',
+            name : '빨간버섯학살자',
+            class : '버서커',
+            level : 46,
+            hp : 132,
+            mp : 30,
+            skill : function(){ 
+                    alert('이얍~!!!!!');
+                    myChr.hp -= 10;
+                } 
+        }
+
+        //myChr.skill();
+
+    document.write(`이름 : ${myChr.name}<br>
+                    lv.${myChr.level}<br>
+                    hp-${myChr.hp}, mp-${myChr.mp}
+                    `);
+
+    /*
+    
+    dog라는 이름의 객체를 만들고,
+    다양한 정보들을 넣어보세요.
+    bark하는 함수도 추가해서,
+    해당함수가 실행되면 왈왈!하고 alert()를 띄웁니다
+    */        
+
+    let dog = {
+        name : '김뽀삐',
+        age : 4,
+        color : 'white',
+        weight: 6,
+        character : 'grumphy',
+        cute : true,
+        bark : function(){
+            alert('왈왈!!');
+        }
+    }
+
+    </script>
+</body>
+</html>

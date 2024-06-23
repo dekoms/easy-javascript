@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //class는 객체를 복제하는 도구
+
+        let now = new Date();
+
+        console.log(now);
+        console.dir(now);
+
+        //1. 년 추출
+        //2. 월 추출
+        //3. 일 추출
+        //4. 요일 추출
+
+        let year = now.getFullYear();
+        let mon = now.getMonth(); //index num
+        let today = now.getDate();
+        let day = now.getDay();// index num
+
+        // if(day == 0){
+        //     day = '일';
+        // }else if(day == 1){
+        //     day = '월';
+        // }else if(day == 2){
+        //     day = '화';
+        // }else if(day == 3){
+        //     day = '수';
+        // }else if(day == 4){
+        //     day = '목';
+        // }else if(day == 5){
+        //     day = '금';
+        // }else if(day == 6){
+        //     day ='토';
+        // }
+
+        // switch(day){
+        //     case 0 : day = '일';
+        //     break;
+        //     case 1 : day = '월';
+        //     break;
+        //     case 2 : day = '화';
+        //     break;
+        //     case 3 : day = '수';
+        //     break;
+        //     case 4 : day = '목';
+        //     break;
+        //     case 5 : day = '금';
+        //     break;
+        //     case 6 : day = '토';
+        // }
+
+        let dayDate = ['일','월','화','수','목','금','토'];
+        day = dayDate[day];
+        /*
+        만약, day가
+        0이면 일
+        1->월
+        2->화
+        3->수
+        4->목
+        5->금
+        6->토
+        을출력하게 만들 것
+        */
+
+        console.log(year,'년', mon+1,'월', today,'일',day,'요일');
+
+    </script>
+    
+</body>
+</html>

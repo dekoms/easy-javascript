@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+        }
+
+
+        .clock{
+            width: 280px;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: turquoise;
+            margin: 120px auto;
+        }
+
+        .date{
+            display: flex;
+            justify-content: center;
+        }
+        .date span:not(:last-child){
+            margin-right: 8px;
+        }
+
+        .time{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 12px;
+        }
+        .time strong{
+            font-size: 40px;
+        }
+
+        .time span{
+            opacity: 0;
+            animation: blink 1s infinite;
+            font-size: 18px;
+            margin:0 2px;
+        }
+
+        @keyframes blink{
+            0%{opacity: 0;}
+            100%{opacity: 100%}
+        }
+
+        .btn-set{
+            display:flex;
+            justify-content: center;
+            padding-top: 100px;
+        }
+        .btn-set button{
+            margin:0 10px;
+            padding:10px 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="btn-set">
+        <button class="btn1">pink</button>
+        <button class="btn2">powderblue</button>
+        <button class="btn3">lavender</button>
+    </div><!--btn-set-->
+
+    <div class="clock">
+        <div class="date">
+            <strong class="year">2024</strong>
+            <span>년</span>
+            <strong class="mon">12</strong>
+            <span>월</span>
+            <strong class="today">12</strong>
+            <span>일</span>
+            <strong class="day">수</strong>
+            <span>요일</span>
+        </div><!--date-->    
+
+        <div class="time">
+            <strong class="hr">00</strong> 
+            <span>:</span>
+            <strong class="min">00</strong>
+            <span>:</span>
+            <strong class="sec">00</strong> 
+        </div><!--time-->
+    </div><!--clock-->
+
+    <script>
+        function clock(){
+            let year = document.querySelector('.year'),
+            mon = document.querySelector('.mon'),
+            today = document.querySelector('.today'),
+            day = document.querySelector('.day');
+
+        /*
+            1. 날짜객체를 생성한다
+            2. 거기서 각각 년/월/일/요일 데이터를 가지고 온다
+            3. 각각의 html 요소 안에 출력한다
+        */
+
+        let now = new Date();
+                    //년,월,일,요일
+
+                    console.log(now);
+            
+        let nowDate = [now.getFullYear(),now.getMonth(),now.getDate(),now.getDay()];
+        let printDay = ['일','월','화','수','목','금','토'];
+        let printDayNum = nowDate[3];
+
+        year.innerText = nowDate[0];
+        mon.innerText = nowDate[1] + 1;
+        today.innerText = nowDate[2];
+        day.innerText = printDay[printDayNum];
+
+        //시계를 돌리자!
+
+        let hr = document.querySelector('.hr'),
+            min = document.querySelector('.min'),
+            sec = document.querySelector('.sec');
+
+            //console.log(hr,min,sec);
+
+        let nowTime = [now.getHours(), now.getMinutes(),now.getSeconds()];
+        
+        let clockDiv = document.querySelector('.clock');
+        let ampm = true;
+        
+        if(nowTime[0] == 0){
+            nowTime[0] = 12; //오전 12시
+            ampm = true;
+        }else if(nowTime[0] > 12){
+            nowTime[0] -= 12; //오후처리
+            ampm = false;
+        }else if(nowTime[0]==12){
+            ampm = false;
+        }
+
+        if(ampm == true){
+            clockDiv.style.backgroundColor='turquoise';
+            clockDiv.style.color='navy';
+        }else{
+            clockDiv.style.backgroundColor='navy';
+            clockDiv.style.color='turquoise';
+        }
+
+
+       for(let i = 0; i<nowTime.length; i++){
+            if(nowTime[i]<10){
+                nowTime[i] = '0' + nowTime[i];
+            }
+       }
+
+
+        /*
+        2. 오전오후를 나누고 0-23시 -> 1-12시 시스템으로 바꾼 뒤
+        3. 오전일 경우, .clock의 백그라운드 색상이 turquoise,
+            글자색은 navy,
+            오후일 경우, .clock background->navy,
+            글자색상-> turquoise
+        */
+
+        hr.innerText = nowTime[0];
+        min.innerText = nowTime[1];
+        sec.innerText = nowTime[2];
+
+
+        } //func.clock
+
+        clock();
+
+        setInterval(clock,500);
+        
+
+        //button들을 누르면 body의 배경색상 변경
+
+        let body = document.querySelector('body');
+        let btn1 = document.querySelector('.btn1'),
+            btn2 = document.querySelector('.btn2'),
+            btn3 = document.querySelector('.btn3');
+        //addEventListener('이벤트유형',function(){})
+
+        btn1.addEventListener('click',function(){
+            body.style.backgroundColor = btn1.innerText;
+        });
+
+        btn2.addEventListener('click',function(){
+            body.style.backgroundColor = btn2.innerText;
+        });
+
+        btn3.addEventListener('click',function(){
+            body.style.backgroundColor = btn3.innerText;
+        });
+
+
+    </script>
+    <!-- 
+        akyeong.yoo@gmail.com
+
+     -->
+</body>
+</html>

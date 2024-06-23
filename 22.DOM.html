@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .item{
+            width: 50px;
+            height: 50px;
+            background-color: cyan;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="logo mainlogo black">안녕하세용?</h1>
+
+    <div class="box1"></div>
+
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <script>
+
+        let h1 = document.querySelector('h1');
+                 //웹문서상의 요소 선택하기
+                
+        let box1 = document.querySelector('.box1');
+        
+       h1.style.backgroundColor = 'pink';
+       //box1의너비를 200px, 높이를 200px 주고,
+       //백그라운드 색을 limegreen으로 넣기
+
+       box1.style.width = '200px';
+       box1.style.height = '200px';
+       box1.style.backgroundColor = 'limegreen';
+
+       box1.innerText = '반갑습니다';
+
+       let item = document.querySelectorAll('.item');
+        //여러개의 html요소들을 한꺼번에 선택하는 기능
+        //그런데 html요소들이 "배열"형태로 저장된다. 
+
+    //    for(let i = 0; i<5; i++){
+       
+    //     item[i].style.border = '2px solid black';
+       
+    //     }
+
+    /*
+       let item = document.querySelectorAll('.item');
+
+  let item = [div.item, div.item, div.item, div.item, div.item];
+
+    */
+
+    item.forEach(function(e){
+        e.style.border = '2px solid black';
+        e.innerText = 'hi';
+    });
+       
+        console.dir(item);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //1.기본연산자 +, -, *, /, %
+        let a = 24;
+        document.write(a - 3, '<br>');
+        document.write(a + 5, '<br>');
+        document.write(a / 3, '<br>');
+        document.write(a * 5, '<br>');
+        /*
+        document.write()
+        body내에 텍스트를 작성하는 명령어
+        이때, html코드를 문자열로 넣어주면 
+        html이 출력된다.
+        이 명령어는 ,를 사용해서 한 번에 여러개의 값을
+        출력해 줄 수 있다. 
+        */
+
+        document.write('<hr>');
+
+        //%는 나머지 구하기
+        /*
+            5 / 2  = 2 ... 1
+
+
+            56 / 4  = 14
+            56 / 3 = 18 ... 2
+            56 / 5 = 11 ... 1
+        */
+        let b = 56;
+        document.write(b % 4, '<br>');
+        document.write(b % 3, '<br>');
+        document.write(b % 5, '<br>');
+
+
+        document.write('<hr>');
+
+        let str1 = 'yaho';
+        let str2 = '안녕하세요';
+        let str3 = '학교종이';
+        let str4 = 123;
+        let str5 = 456;
+        let str6 = '123';
+
+
+        document.write(str4 + str5,'<br>');
+        document.write(str6 + str5, '<br>');
+        //문자+숫자를 할 경우 한덩어리로 이어진 문자열이 된다.
+
+        document.write(str3 + ' 땡땡땡','<br>');
+        //문자 + 문자 = 문자열을 하나로 잇기
+        document.write('hi!!!' + true);
+        //문자열과 +로 연산을 하면 하나로 이어진 문자열이 나온다.
+
+        document.write('<hr>');
+
+        let hi = 'hola';
+
+        document.write(hi - 30, '<br>');
+        //NaN : Not a Number
+        document.write('123' - 100,'<br>');
+/*
+    일반적으로 문자열 데이터에서 숫자데이터를 빼거나 곱하면
+    작동하지 않는 것이 당연하게 생각된다.
+    그러나 자바스크립트에서는 문자열 등 숫자가 아닌 다른 타입의
+    데이터에 숫자를 연산할 경우, 자바스크립트가 자동으로 해당
+    데이터를 숫자형으로 변환해서 계산한다.
+    - 암시적 형변환 
+    
+*/
+        document.write(true + 30,'<br>'); //1
+        document.write(false * 18,'<br>'); //0
+
+    
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let a =3;
+        document.write(a > 5, '<br>');
+        document.write(a < 5, '<br>');
+        
+        //비교연산자
+        /*
+        반드시 true / false의 값을 가진다
+        */
+
+        document.write(a >= 3,'<br>');
+        document.write(a <= 3,'<br>');
+
+        document.write('바나나' > '감');
+        document.write('기차' > '트럭');
+        document.write('<hr>');
+
+        let x = 120;
+        let y = 100;
+        let z = '120';
+
+        //== 같다
+        //데이터의 타입은 고려하지않는다.
+        document.write(x == z, '<br>');
+        document.write(x == y, '<br>');
+
+        //=== 같다
+        //데이터의 타입까지 고려한다.
+        document.write(x === z,'<br>');
+
+
+        // != 같지않다
+        // 데이터의 타입까지는 고려하지 않는다
+        // 값만 따진다
+        document.write(x != y, '<br>');
+        document.write(x != z, '<br>');
+        document.write(1 != true, '<br>');
+    
+        // !== 같지않다
+        //데이터의 타입까지 고려해서 체크
+        document.write(x !== z);
+
+        
+
+
+    </script>
+
+
+
+</body>
+</html>

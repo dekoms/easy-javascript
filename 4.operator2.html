@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bar{
+            width: 10px;
+            height: 30px;
+            background-color: turquoise;
+        }
+
+        .round{
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 44px;
+            color: #fff;
+            border-radius: 50%;
+            background-color: deeppink;
+            margin: 0 auto;
+            font-family: 'impact';
+        }
+        .btn-set{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-set button{
+            margin:0 5px;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+
+    <div class="round">0</div>
+
+    <div class="btn-set">
+        <button id="pls">+</button>
+        <button id="min">-</button>
+        <button id="reset">reset</button>
+    </div><!--btn-set-->
+
+
+
+    <div class="bar"></div>
+
+
+    <script>
+
+   let round = document.querySelector('.round');
+   let pls = document.querySelector('#pls');
+   let min = document.querySelector('#min');
+   let res = document.querySelector('#reset');
+
+   let num = 0;
+   //pls 버튼을 누르면 num에 있는 숫자가 1씩 커져서
+   //round안에 출력된다
+   
+   pls.addEventListener('click',function(){
+        num ++;
+        round.innerText = num;
+   });
+   //min 버튼을 누르면 num에 있는 숫자가 1씩 작아져서
+   //round 안에 출력
+
+   min.addEventListener('click',function(){
+        num --;
+        round.innerText = num;
+   });
+
+   res.addEventListener('click',function(){
+        num = 0;
+        round.innerText = num;
+   });
+
+
+
+
+
+
+
+    let bar = document.querySelector('.bar');
+    //.bar 요소를 찾아서 bar라는 변수에 저장
+    let wid = 10;
+    //bar의 너비
+
+    //bar를 클릭했을 때
+    bar.addEventListener('click',function(){
+        wid += 10; //wid = wid + 10
+        bar.style.width = wid + 'px';
+    });
+
+
+
+
+
+
+        let a = 24;
+        document.write(a - 3, '<br>');
+        document.write(a + 5, '<br>');
+    
+        document.write('<hr>');
+        
+        a = a + 2; // 26
+        a = a + 2; // 28
+
+        a = a + 2; // 30
+        a += 2; // 32 -> a = a+2
+        a += 2; 
+
+        document.write(a,'<br>');
+
+/*
+    프로그래밍을 하다보면, 
+    이미 존재하는 변수에 저장되어있는 데이터값을
+    변경한 후 다시 해당 변수에 저장해야할 일이
+    많다. 이때
+    a = a + 2의 형태로 연산->재저장할 수도 있지만,
+
+    a += 2의 형태로 "할당연산자"를 사용해서 할 수도 있다.
+*/
+
+document.write('<hr>');
+
+let b = 31;
+    b = b - 3;
+    b = b - 3; 
+
+    b -= 3; //22
+
+    b = b * 2; //44
+    b = b * 2; //88
+    b *= 2; // 176
+
+    b /= 2; //88
+
+document.write(b,'<br>');
+
+document.write('<hr>');
+
+let c = 20;
+c = c + 1;//21
+c = c + 1;//22
+c += 1;//23
+c ++; //24
+c ++; //25
+
+// ++ 증가연산자 -> 기존에 있는 값에 1을 더한 다음
+//다시 저장 
+
+c --;
+c --; 
+c --;
+// -- 감소연산자 -> 기존의 값에 1을 뺀 다음 다시 저장
+
+
+document.write(c);
+
+
+    </script>
+</body>
+</html>

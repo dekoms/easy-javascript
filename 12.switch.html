@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //선택문 switch
+
+    /*
+        번호를 물어서 num변수에 받아서 저장을 한 다음 
+        그 번호가 1111이면 맥북당첨
+        그 번호가 2222면 에어팟당첨
+        3333이면 모니터 당첨
+        4444이면 세탁기 당첨
+        
+        -> console.log()로 출력
+    */
+
+
+    /*
+        switch(비교대상){
+            case A : 비교대상이 A일때 실행될 구문;
+            break;
+            case B : 비교대상이 B일때 실행 될 구문;
+            break;
+            case C : 비교대상이 C일때 실행 될 구문;
+            break;
+            ...
+            default : 이것도 저것도 해당하는 게 없을 때 실행;
+        }
+
+        break : 
+        switch구문의 경우 비교대상이 어떠한 값과 일치 할 때
+        그 구문부터 그 이하의 모든 구문들이 다 실행이 된다.
+        그래서 이것을 막기 위해서, 실행될 부분의 끄트머리에
+        반드시 break;를 넣어줘야 합니다.
+
+    */
+    // let num = prompt('숫자를 입력해주세요');
+    //     num = parseInt(num);
+
+    //     switch(num){
+    //         case 1111 : document.write('맥북 당첨');
+    //         break;
+    //         case 2222 : document.write('에어팟 당첨');
+    //                     alert('수량한정입니다!');
+    //         break;
+    //         case 3333 : document.write('모니터 당첨');
+    //         break;
+    //         case 4444 : document.write('세탁기 당첨');
+    //         break;
+    //         default : document.write('꽝!!!!');
+    //     }
+
+
+    // if(num == 1111){
+    //     document.write('맥북 당첨');
+    // }else if(num ==2222){
+    //     document.write('에어팟 당첨');
+    // }else if(num == 3333){
+    //     document.write('모니터 당첨');
+    // }else if(num == 4444){
+    //     document.write('세탁기 당첨');
+    // }else{
+    //     document.write('꽝!');
+    // }
+
+    // let day = prompt('요일입력');
+    // let result; 
+
+    // switch(day){
+    //     case '월' : result = '아메리카노 1+1행사';
+    //     break;
+    //     case '화' : result = '쿠키무료증정';
+    //     break;
+    //     case '수' : result = '조각케익 20% 할인';
+    //     break;
+    //     case '목' : result = '어린이고객 생과일주스 제공';
+    //     break;
+    //     case '금' : result = '비가오면 아메리카노 증정';
+    //     break;
+    //     case '토' : result = '전 상품 15% 할인 행사';
+    //     break;
+    //     case '일' : result = '홀케익 전품목 20% 할인';
+    //     break;
+    //     default: result = '제대로된 값을 입력해주세요';
+    // }
+
+    //  console.log(result);
+
+    /*
+    color 라는 변수를 만들고 색상을 물은 다음,
+
+    빨강 -> red
+    주황 -> orange
+    초록 -> green
+    노랑 -> yello
+    파랑 -> blue
+    를 출력 (콘솔에다 출력)
+    
+    */
+
+    // let color = prompt('색상을 입력해주세요');
+    // let result;
+    // switch(color){
+    //     case '빨강' : result = "red";
+    //     break;
+    //     case '주황' : result = "orange";
+    //     break;
+    //     case '초록' : result = "green";
+    //     break;
+    //     case '파랑' : result = "blue";
+    //     break;
+    //     case '노랑' : result = "yellow";
+    //     break;
+    //     default : alert('값이 없습니다!');
+    // }
+
+        //console.log(result);
+
+        // let body = document.querySelector('body');
+        // body.style.backgroundColor = result;
+
+        
+        //location.replace('https://naver.com/');
+
+        let site = prompt('자주사용하는 포털');
+        let url;
+
+        switch(site){
+            case '구글' : url = 'https://google.com';
+            break;
+            case '네이버' : url = 'https://naver.com';
+            break;
+            case '다음' : url = 'https://daum.net';
+            break;
+            case '네이트' : url = 'https://nate.com';
+            break;
+            default : alert('구글/네이버/다음/네이트 중에서 써!!!!');
+                      location.reload();
+        }
+
+        if(url != undefined){
+            location.replace(url);
+        }
+    </script>
+    
+</body>
+</html>

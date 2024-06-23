@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+            키를 물어보고,
+            키가 150미만이거나 190이상이면
+            "탑승하실 수 없습니다"
+        */
+
+        // let height = prompt('키를 입력해주세요');
+        // if(height < 150 || height >= 190){
+        //     document.write("탑승하실 수 없습니다");
+        // }
+
+/*
+            if(비교식){
+               비교식이 참일 때 실행 될 실행구문
+            }else{
+                비교식이 거짓일 때 실행 될 실행구문
+            }
+*/
+
+        // let height = prompt('키를 입력해주세요');
+        // if(height >= 150 && height < 190){
+
+        //     document.write("탑승하실 수 있습니다");
+
+        // }else{
+        //     document.write("탑승할 수 없습니다");
+
+        // }
+
+        
+        /*
+        키가 150보다 크거나 같고 동시에 190 미만일때는
+        탑승할 수 있습니다
+        */
+        
+        /*
+        size라는 이름의 변수를 만들고
+        신발 사이즈가 220~260사이면
+         재고가 있습니다,
+         아니면 재고가 없습니다
+        */
+
+        // let size = prompt("신발사이즈!!!");
+        // if(size >= 220 && size <= 260){
+        //     document.write('재고가 있씁니다');
+        // }else{
+        //     document.write('재고가 없습니다');
+        // }
+
+        // let gender = prompt('성별을 입력해주세요');
+        // let age = prompt('나이!!!');
+
+        // if(gender == "남성" && age >=20){
+        //     document.write("참가할 수 있습니다");
+        // }else{
+        //     document.write("참가할 수 없습니다");
+        // }
+
+        /*
+        prompt를 두가지를 만듭니다.
+        1. 아이디를 물어보기
+        2. 비밀번호를 물어보기
+        아이디가 yaho1234이고, 비밀번호가 12341234일 때만
+        "접속되었습니다"
+        라고 출력, 아닐 경우에는 
+        "접속이 실패하였습니다"
+        라고 출력
+        */
+       let id = prompt("아이디를 입력해주세요");
+       let pw = prompt("비밀번호를 입력해주세요");
+       if(id == 'yaho1234' && pw == 12341234){
+         document.write('접속 되었습니다.');
+       }else{
+        document.write('접속이 실패하였습니다.');
+       }
+    </script>
+</body>
+</html>

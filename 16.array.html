@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    
+<script>
+    /*
+    배열 !!!
+    일종의 리스트형태의 데이터
+    순서(인덱스넘버)를 사용해서 원하는 데이터만 빼 쓸 수 있게
+    만들어 둔 리스트
+
+
+    - 인덱스넘버는 순서를 의미하고, 0부터 시작합니다. 
+    */
+    let arr1 = ['철수', '영희', '바둑이', '성우', '민호', '민영', '아영', '시윤', '은혜','현석'];
+    document.write(arr1[4]);
+
+    /*
+     1. 철수
+     2. 영희
+     3. 바둑이
+     4. 성우
+     5. 민호
+     6. 민영
+     의 형태로 for구문을 사용해서 출력하시오 
+    */
+
+    //배열이름.length 는 배열안에 들어있는 데이터의 개수
+
+    for(let i =0; i<arr1.length; i++){
+        document.write(`${i+1}. ${arr1[i]} <br>`);
+    }
+
+    //flower라는 변수를 만들고
+    //거기에 5가지의 꽃을 데이터로 넣은 다음
+    //for구문을 사용해서 앞에 숫자붙여서 출력
+
+    let flower = ['장미','라벤더','칼렌듈라','캐모마일','세이지'];
+
+        flower.push('바이올렛');
+        flower.push('무궁화');
+
+    for(let i = 0; i<flower.length; i++){
+        document.write(`${i+1}. ${flower[i]}<br>`);
+    }
+    
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    
+    <script>
+
+        //함수의 역할 1: 기능을 저장해두는 주머니
+        // - 같은 기능들을 반복해서 쓰지않아도 된다. 
+        // = 재활용
+
+        function apple(){
+            document.write("사과!!!!!<br>");
+            document.write("사과!!!!!<br>");
+            document.write("사과!!!!!<br>");
+            document.write("사과!!!!!<br>");
+            document.write("사과!!!!!<br>");
+            document.write("사과!!!!!<br>");
+            document.write("사과!!!!!<br>");
+            document.write("사과!!!!!<br>");
+        }
+
+        //apple();
+        //apple();
+        //prompt(), document.write(), confirm()... - 내장함수 built-in function
+        
+        //2.자판기형 함수
+        function plus2(x){
+            document.write(`${x} + 2 = ${x+2}<br>`);
+        }
+
+        let plus2 = function(){
+            document.write(`${x} + 2 = ${x+2}<br>`);
+        }
+
+
+
+
+
+
+
+        plus2(12);
+        plus2(18);
+        
+        /*
+        hi('사람이름');
+         -> 안녕하세요 사람이름님, 반갑습니다.
+        */
+
+        // function hi(x){
+        //     document.write(`안녕하세요 ${x}님, 반갑습니다.`);
+        // }
+
+        // hi('김개똥');
+
+        /*
+            dan(2);
+
+            2단
+            2 x 1 = 2
+            2 x 2 = 4
+            2 x 3 = 6...
+
+
+            dan(13);
+
+            13단
+            13 x 1 = 13
+            13 x 2 = 26
+            13 x 3 = 39
+            13 x 4 = 52
+            ...
+        
+        */
+
+        function dan(x){
+            document.write(`<h3>${x}단</h3>`);
+            
+            for(let i=1;i<=9;i++){
+            document.write(`${x} x ${i} = ${x*i}<br>`);
+            }
+
+        }
+
+        //dan(4);
+        //dan(13);
+
+        /*
+        네개의 값을 받아서, 평균을 구해주는 함수 만들기
+        */
+       function avr(x,y,z,a){
+        document.write(`평균값은 ${(x+y+z+a)/4}입니다<br>`);
+       }
+
+       //avr(12,24,36,48);
+       //avr(100,248,137,250);
+
+       function bmi(weight, height){
+            let aw = (height - 100) * 0.9;
+            let result;
+
+            if(weight >= aw * 1.2){
+                result = '과체중';
+            }else if(weight >= aw * 0.9){
+                result = '정상체중';
+            }else if(weight >= aw * 0.8){
+                result = '미용체중';
+            }else{
+                result = '저체중';
+            }
+
+            document.write(`키: ${height}cm, 체중: ${weight}kg 입니다.<br>
+                            평균체중은 ${aw}kg이며, 현재 ${result}입니다.<br>`);
+       }
+
+       bmi(54,170);
+       bmi(120,187);
+       /*
+        bmi(weight, height);
+        (키 - 100)*0.9
+
+        입력받은 키와 체중을 가지고 평균 체중을 구한 다음 
+        체중이 평균체중보다 120% 이상 나가면 '과체중입니다'
+        90% 이상-> '정상체중입니다'
+        80% 이상-> '미용체중'
+       그 이하 -> '저체중입니다'
+
+       키 : 168 cm, 체중: 60kg, 정상체중입니다
+
+       
+       
+       */
+    </script>
+</body>
+</html>
